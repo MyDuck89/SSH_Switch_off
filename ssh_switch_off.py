@@ -14,7 +14,7 @@ print(f'reset - переапуск, off - выключение')
 
 while True:
   
-    temp = str(input('Введите уоманду: '))
+    temp = str(input('Введите команду: '))
 #   
     if temp == 'reset':
         stdin, stdout, stderr = client.exec_command('reboot')
