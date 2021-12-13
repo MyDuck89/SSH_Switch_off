@@ -30,13 +30,13 @@ def help(message):
 @bot.message_handler(commands=['shutdown'])
 def shutdown(message):
     bot.send_message(message.chat.id, 'Выключение системы Ubuntu')
-    stdin, stdout, stderr = client.exec_command('shutdown')
+    stdout = client.exec_command('shutdown')
     result = stdout.read()
     
 @bot.message_handler(commands=['reboot'])
 def reboot(message):
     bot.send_message(message.chat.id, 'Перезагрузка системы Ubuntu')
-    stdin, stdout, stderr = client.exec_command('reboot')
+    stdout = client.exec_command('reboot')
     result = stdout.read()
     
 
