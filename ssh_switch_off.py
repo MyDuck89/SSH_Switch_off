@@ -17,11 +17,11 @@ while True:
     temp = str(input('Введите команду: '))
 #   
     if temp == 'reset':
-        stdin, stdout, stderr = client.exec_command('reboot')
+        stdout = client.exec_command('reboot')
         result = stdout.read()
         print('Перезагрузка...')
     elif temp == 'off':
-        stdin, stdout, stderr = client.exec_command('shutdown')
+        stdout = client.exec_command('shutdown')
         result = stdout.read()
         print('Выключение...')
 client.close()
